@@ -1,0 +1,44 @@
+1.1
+Có n cuộc họp, cuộc họp thứ i bắt đầu vào thời điểm Ai và kết thúc ở thời điểm Bi. Do
+chỉ có một phòng hội thảo nên 2 cuộc họp bất kì sẽ được cùng bố trí phục vụ nếu khoảng
+thời gian làm việc của chúng chỉ giao nhau tại đầu mút. Hãy bố trí phòng họp để phục vụ
+được nhiều cuộc họp nhất.
+1.2
+Trung tâm tính toán hiệu năng cao nhận được đơn đặt hàng của n khách hàng. Khách
+hàng i muốn sử dụng máy trong khoảng thời gian từ ai đến bi và trả tiền thuê là ci. Hãy bố
+trí lịch thuê máy để tổng số tiền thu được là lớn nhất mà thời gian sử dụng máy của 2
+khách hàng bất kì được phục vụ đều không giao nhau (cả trung tâm chỉ có một máy cho
+thuê).
+1.3
+Cho n tam giác trên mặt phẳng. Tam giác i bao tam giác j nếu 3 đỉnh của tam giác j
+đều nằm trong tam giác i (có thể nằm trên cạnh). Hãy tìm dãy tam giác bao nhau có nhiều
+tam giác nhất
+1.4
+Dãy số Wavio là dãy số nguyên thỏa mãn các tính chất: các phần tử đầu sắp xếp thành
+1 dãy tăng dần đến 1 phần tử đỉnh sau đó giảm dần.
+Ví dụ dãy số 1 2 3 4 5 2 1 là 1 dãy Wavio độ dài 7. Cho 1 dãy gồm N số nguyên, hãy
+chỉ ra một dãy con Wavio có đọ dài lớn nhất trích ra từ dãy đó.
+2.1
+Cho dãy A1,A2,…,AN. Tìm một dãy con của dãy đó có tổng bằng S.
+2.2
+Cho n gói kẹo, gói thứ i có ai viên. Hãy chia các gói thành 2 phần sao cho chênh lệch
+giữa 2 phần là ít nhất.
+2.3
+Cho n số tự nhiên A1,A2,…,AN. Ban đầu các số được đặt liên tiếp theo đúng thứ tự cách
+nhau bởi dấu "?": A1 ? A2 ? ... ? AN. Cho trước số nguyên S, có cách nào thay các dấu ?
+bằng dấu + hay dấu − để được một biểu thức số học cho giá trị là S không?
+3.1
+Một xâu gọi là xâu đối xứng (palindrome) nếu xâu đó đọc từ trái sang phải hay từ phải
+sang trái đều như nhau. Cho một xâu S, hãy tìm số kí tự ít nhất cần thêm vào S để S trở
+thành xâu đối xứng.
+3.2
+Hai nước Alpha và Beta nằm ở hai bên bờ sông Omega, Alpha nằm ở bờ bắc và có M
+thành phố được đánh số từ 1 đến M, Beta nằm ở bờ nam và có N thành phố được đánh số
+từ 1 đến N (theo vị trí từ đông sang tây). Mỗi thành phố của nước này thường có quan hệ
+kết nghĩa với một số thành phố của nước kia. Để tăng cường tình hữu nghị, hai nước
+muốn xây các cây cầu bắc qua sông, mỗi cây cầu sẽ là nhịp cầu nối 2 thành phố kết
+nghĩa. Với yêu cầu là các cây cầu không được cắt nhau và mỗi thành phố chỉ là đầu cầu
+cho nhiều nhất là một cây cầu, hãy chỉ ra cách bắc cầu được nhiều cầu nhất.
+3.3
+Cho 2 xâu X, Y. Hãy tìm xâu con của X và của Y có độ dài lớn nhất. Biết xâu con của
+một xâu thu được khi xóa một số kí tự thuộc xâu đó (hoặc không xóa kí tự nào).
