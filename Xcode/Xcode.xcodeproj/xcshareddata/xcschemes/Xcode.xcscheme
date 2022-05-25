@@ -35,7 +35,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       debugAsWhichUser = "root"
-      customLLDBInitFile = "/Users/hoangviet/Documents/GiftedProgress/Xcode/Xcode"
+      customLLDBInitFile = "/Users/hoangviet/GiftedProgress/Xcode/Xcode"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "programmer": "arduino:avrisp",
+    "port": "/dev/tty.usbserial-0001",
+    "sketch": "Competitvie_Programing/10CTin/10Problems/task1.cpp"
+}

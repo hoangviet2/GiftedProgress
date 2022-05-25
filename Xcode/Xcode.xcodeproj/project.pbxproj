@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2684CD2785DF2800901BD1 /* Greedy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B2684CC2785DF2800901BD1 /* Greedy.cpp */; };
 		3B8148D42765BA4000EDEF44 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B8148D32765BA4000EDEF44 /* main.cpp */; };
+		3BC10E422791C2EA00854D08 /* binary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BC10E412791C2EA00854D08 /* binary.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,10 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B2684CC2785DF2800901BD1 /* Greedy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Greedy.cpp; sourceTree = "<group>"; };
 		3B8148D02765BA4000EDEF44 /* Xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8148D32765BA4000EDEF44 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3B9A3C8E27A81D3D00615492 /* input.INP.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.INP.txt; sourceTree = "<group>"; };
+		3B9A3C8F27A81D6600615492 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		3BB833F82765FEDC003A6CC3 /* DIJKSTRA.INP */ = {isa = PBXFileReference; lastKnownFileType = text; path = DIJKSTRA.INP; sourceTree = "<group>"; usesTabs = 0; };
-		3BB833F92765FF40003A6CC3 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		3BC10E412791C2EA00854D08 /* binary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = binary.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +66,10 @@
 			children = (
 				3B8148D32765BA4000EDEF44 /* main.cpp */,
 				3BB833F82765FEDC003A6CC3 /* DIJKSTRA.INP */,
-				3BB833F92765FF40003A6CC3 /* input.txt */,
+				3B2684CC2785DF2800901BD1 /* Greedy.cpp */,
+				3BC10E412791C2EA00854D08 /* binary.cpp */,
+				3B9A3C8E27A81D3D00615492 /* input.INP.txt */,
+				3B9A3C8F27A81D6600615492 /* input.txt */,
 			);
 			path = Xcode;
 			sourceTree = "<group>";
@@ -124,6 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8148D42765BA4000EDEF44 /* main.cpp in Sources */,
+				3BC10E422791C2EA00854D08 /* binary.cpp in Sources */,
+				3B2684CD2785DF2800901BD1 /* Greedy.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

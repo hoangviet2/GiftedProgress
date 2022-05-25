@@ -1,79 +1,111 @@
-#include <bits/stdc++.h>
-
+//#include<bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <fstream>
+#include <stdlib.h>
 using namespace std;
 
-#define ll long long
-const int N = 1e5 + 5;
-ll a[107], cnt, b[100005], res = 1000, sum, ans, n, s;
+struct myans{
+    int diff;
+    int size;
+};
 
-void backtrack1(ll u)
-{
-        if (u == (n / 2 + 1))
-        {
-            cnt++;
-            b[cnt] = s;
-            return;
-        }
-        backtrack1(u + 1);
-        s = s + a[u];
-        backtrack1(u + 1);
-        s = s - a[u];
+vector<int> checker(vector<int>);
+vector<int> readata();
+vector<int> sortedInt(vector<int>,bool);
+myans minimumDiff(vector<int>);
+int helper(vector<int>,int);
+int findways(vector<int>,int);
+
+int main(){
+    //genExample();
+    //freopen("input.INP", "r", stdin);
+    //freopen("output.OUT", "w", stdout);
+    vector<int> numbers = readata();
+    if(numbers.size()==0){
+        cout<<0;
+        return 0;
+    }else if(numbers.size() == 2){
+        cout<<abs(numbers[0]-numbers[1])<<" "<<1;
+        return 0;
+    }
+    numbers = sortedInt(numbers,true);
+    myans min = minimumDiff(numbers);
+    cout<<min.diff<<" "<<findways(numbers, min.diff)/min.size<<"\n";
+    return 0;
 }
 
-void play(ll u)
-{
-        ll l = 1, h = cnt;
-        while (l <= h)
-        {
-            ll mid = (l + h) / 2;
-            if ((sum - 2 * (s + b[mid])) >= 0)
-                l = mid + 1;
-            else h = mid - 1;
-        }
-        if ((sum - 2 * (s + b[h])) < 0 || (sum - 2 * (s + b[h])) > res) return;
-        if ((sum - 2 * (s + b[h])) < res)
-        {
-            ans = 0;
-            res = sum - 2 * (s + b[h]);
-        }
-        ans++;
-        ll lo = h - 1, hi = h + 1;
-        while (lo >= 1 && (sum - 2 * (s + b[lo])) == res)
-        {
-            ans++;
-            lo--;
-        }
-        while (hi <= cnt && (sum - 2 * (s + b[hi])) == res)
-        {
-            ans++;
-            hi++;
-        }
+vector<int> checker(vector<int> example){
+    for(int i=0;i<example.size();++i){
+        example[i] = 30;
+    }
+    return example;
 }
 
-void backtrack2(ll u)
-{
-        if (u == (n + 1))
-        {
-            play(s);
-            return;
-        }
-        backtrack2(u + 1);
-        s = s + a[u];
-        backtrack2(u + 1);
-        s = s - a[u];
+vector<int> readata(){
+    int n;
+    cin>>n;
+    vector<int> ans;
+    for(int i=0;i<n;++i){
+        int temp;
+        cin>>temp;
+        ans.push_back(temp);
+    }
+    return ans;
 }
 
-int main()
-{
-        ios_base::sync_with_stdio(false);
-        cin.tie(0);
-        cin >> n;
-        for (int i = 1; i <= n; i++)
-            cin >> a[i], sum = sum + a[i];
-        backtrack1(1);
-        s = 0;
-        sort(b + 1, b + cnt + 1);
-        backtrack2(n / 2 + 1);
-        if (res == 0) ans /= 2;
-        cout << res << " " << ans;
+vector<int> sortedInt(vector<int>nums,bool isGreater = true){
+    if(isGreater){
+        sort(nums.begin(),nums.end(),greater<int>());
+    }else{
+        sort(nums.begin(),nums.end());
+    }
+    return nums;
+}
+
+// find the minimum
+myans minimumDiff(vector<int> numbers){
+    int sizes = 1;
+    int a = numbers[0];
+    int b = numbers[1];
+    myans ans;
+    for(int i=2;i<numbers.size();++i){
+        if(a>b){
+            b+=numbers[i];
+        }else{
+            a+=numbers[i];
+            ++sizes;
+        }
+    }
+    ans.size = sizes;
+    ans.diff = abs(a-b);
+    return ans;
+}
+
+// recursion play
+int helper(vector<int> nums, int ignoreind){
+    int a = nums[ignoreind];
+    int b = 0;
+    for(int i=0 ;i<nums.size();++i){
+        if(i!=ignoreind){
+            if(a<b){
+                a+=nums[i];
+            }else{
+                b+=nums[i];
+            }
+        }
+    }
+    return abs(a-b);
+}
+
+// find ways (do anything except the last)
+int findways(vector<int> nums,int target){
+    int ans = 1;
+    for(int i = 1;i<nums.size();++i){
+        if(helper(nums, i)==target){
+            ++ans;
+        }
+    }
+    return ans;
 }
