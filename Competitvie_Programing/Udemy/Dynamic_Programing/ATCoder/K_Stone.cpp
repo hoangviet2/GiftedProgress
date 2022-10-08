@@ -26,10 +26,10 @@ int32_t main() {
 			}
 		}
 	}
-	for(int i=0;i<k+1;++i){
-		cout<<dp[i]<<" ";
-	}
-	cout<<"\n";
+	// for(int i=0;i<k+1;++i){
+	// 	cout<<dp[i]<<" ";
+	// }
+	//cout<<"\n";
 	cout<<(dp[k] ? "First" : "Second");
 	return 0;
 }

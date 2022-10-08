@@ -1,0 +1,8 @@
+shortest dist to 0:1
+shortest dist to 1:0
+shortest dist to 2:1
+shortest dist to 3:2
+shortest dist to 4:2
+shortest dist to 5:3
+shortest dist to 6:4
+6-->5-->4-->0-->1

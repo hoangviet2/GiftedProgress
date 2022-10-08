@@ -10,10 +10,6 @@ int n,m;
 vector<vector<char>> grid;
 
 int32_t main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
     cin>>n>>m;
     for(int i=0;i<n;++i){
         vector<char> line;
@@ -38,6 +34,7 @@ int32_t main() {
                 dp[i][j] = dp[i-1][j];
             }else{
                 dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                dp[i][j] %= mod;
             }
             if(grid[i][j] == '#'){
                 dp[i][j] = 0;

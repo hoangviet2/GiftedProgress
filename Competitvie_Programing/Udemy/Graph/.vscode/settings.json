@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "ios": "cpp",
+        "queue": "cpp",
+        "random": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "map": "cpp",
+        "__hash_table": "cpp",
+        "string": "cpp"
+    }
+}

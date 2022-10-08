@@ -3,9 +3,7 @@
 #define F first
 #define S second
 #define pb push_back
-
 using namespace std;
-
 const int N = 1e5+1;
 vector<int> grid [N];
 int memo[N];

@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "ios": "cpp",
+        "iostream": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "array": "cpp",
+        "forward_list": "cpp",
+        "queue": "cpp",
+        "string_view": "cpp"
+    }
+}

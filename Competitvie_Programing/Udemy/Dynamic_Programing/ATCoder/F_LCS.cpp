@@ -43,9 +43,9 @@ int32_t main(){
 	n = s.length();
 	m = t.length();
 	memset(memo,-1,sizeof(memo));
-	int l = give_lcs(0,0);
-	cout<<l;
-	//trace(0,0);
-	//cout<<res;
+	//int l = give_lcs(0,0);
+	//cout<<l;
+	trace(0,0);
+	cout<<res;
 	return 0;
 }

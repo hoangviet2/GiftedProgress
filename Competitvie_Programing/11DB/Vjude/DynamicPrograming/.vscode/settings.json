@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "random": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp",
+        "iostream": "cpp",
+        "string": "cpp"
+    }
+}

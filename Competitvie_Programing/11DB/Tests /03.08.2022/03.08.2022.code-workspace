@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../Downloads/Nghia"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iosfwd": "cpp",
+			"iostream": "cpp",
+			"forward_list": "cpp",
+			"list": "cpp",
+			"algorithm": "cpp"
+		}
+	}
+}

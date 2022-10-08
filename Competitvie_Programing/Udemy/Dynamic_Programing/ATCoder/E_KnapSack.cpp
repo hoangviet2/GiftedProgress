@@ -14,7 +14,6 @@ int32_t main() {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 #endif
-
 	cin >> n >> W;
 
 	for (int i = 1; i <= n; i++) {
@@ -52,9 +51,5 @@ int32_t main() {
 	}
 
 	cout << ans;
-
-
-
-
 	return 0;
 }

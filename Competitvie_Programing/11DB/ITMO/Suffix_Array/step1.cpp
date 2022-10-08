@@ -60,7 +60,7 @@ int32_t main() {
     }
     for(int i=0;i<n;++i){
         //cout<<p[i]<<" "<<s.substr(p[i],n-p[i])<<"\n";
-        cout<<p[i]<<" ";
+        cout<<p[i]<<" "
     }
 
 	return 0;
