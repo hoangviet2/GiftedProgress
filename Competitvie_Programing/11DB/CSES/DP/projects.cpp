@@ -1,48 +1,34 @@
-//Projects
 #include <bits/stdc++.h>
-using namespace std;
-#define ll long long
-vector<pair<int,int> > schedules;
-vector<int> money;
-int maxs = INT_MIN;
-int dphelper(int index,int curtime){
-    if(index>=money.size() || curtime > maxs){
-        return 0;
-    }
-    int ans = 0;
-    ans = dphelper(index+1,curtime);
-    if(curtime<schedules[index].first){
-        ans = max(ans,dphelper(index+1,schedules[index].second)+money[index]);
-    }
-    return ans;
-}
 
-void solve(){
-    int n;
-    cin>>n;
-    for(int i=0;i<n;++i){
-        int a,b,c;
-        cin>>a>>b>>c;
-        schedules.push_back(make_pair(a,b));
-        maxs = max(maxs,b);
-        money.push_back(c);
-    }
-    cout<<dphelper(0,0);
-}
+using namespace std;
+typedef long long ll;
+typedef pair<int,int> pii;
+const int maxN = 2e5+1;
+
+int N, a[maxN], b[maxN];
+ll p[maxN], dp[2*maxN];
+struct project {int time, id, type;} times[2*maxN];
+map<int,int> mp;
 
 int main(){
-// #ifndef ONLINE_JUDGE
-
-//     freopen("input.txt", "r", stdin);
-
-//     freopen("output.txt", "w", stdout);
-
-// #endif // ONLINE_JUDGE
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t = 1;
-    while(t--){
-        solve();
+    scanf("%d", &N);
+    for(int i = 1; i <= N; i++){
+        scanf("%d %d %lld", &a[i], &b[i], &p[i]);
+        times[2*i] = {a[i], i, 0};
+        times[2*i+1] = {b[i], i, 1};
     }
-    return 0;
+
+    sort(times+2, times+2*N+2, [](project A, project B){
+        return A.time == B.time ? A.id < B.id : A.time < B.time;
+    });
+
+    for(int i = 2; i <= 2*N+1; i++)
+        if(!mp[times[i].time])
+            mp[times[i].time] = i;
+
+    for(int i = 2; i <= 2*N+1; i++){
+        if(times[i].type == 0)  dp[i] = dp[i-1];
+        else dp[i] = max(dp[i-1], dp[mp[a[times[i].id]]-1] + p[times[i].id]);
+    }
+    printf("%lld\n", dp[2*N+1]);
 }
