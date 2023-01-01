@@ -3,6 +3,13 @@
         "iostream": "cpp",
         "ios": "cpp",
         "vector": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "ostream": "cpp",
+        "__tree": "cpp",
+        "set": "cpp",
+        "locale": "cpp",
+        "random": "cpp",
+        "__locale": "cpp",
+        "map": "cpp"
     }
 }

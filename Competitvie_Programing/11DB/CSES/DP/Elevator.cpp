@@ -6,30 +6,30 @@ void solve(){
     int n;
     ll maxW;
     cin>>n>>maxW;
-    vector<ll> people(n);
+    int values[n];
     for(int i=0;i<n;++i){
-        cin>>people[i];
+        cin>>values[i];
     }
-    vector<pair<ll,ll>> dp(1<<n); // (numberOfRides, totalWeightOfLastRide)
-    dp[0] = {1, 0};
-    for (int mask = 1; mask < (1<<n); mask++) {
-        pair<ll, ll> bestResult = {INT_MAX, INT_MAX};
-        for (int i = 0; i < n; i++) {
-            if (((1 << i) & mask) == 0){
+    vector<pair<ll,ll> > dp(1<<n);// numberofrides, weight of the last ride
+    dp[0] = make_pair(1,0);
+    for(int mask=1;mask<(1<<n);++mask){ // gen all masks
+        pair<ll,ll> bestChoice = make_pair(INT_MAX,INT_MAX);
+        for(int i=0;i<n;++i){
+            if( ((1 << i) & mask) == 0){
                 continue;
             }
-            auto res = dp[(1 << i) ^ mask];
-            if (res.second + people[i] <= maxW) {
-                res.second += people[i];
-            } else {
+            auto res = dp[ (1<<i) ^ mask];
+            if(res.second + values[i] <= maxW){
+                res.second += values[i];
+            }else{
                 res.first += 1;
-                res.second = people[i];
+                res.second = values[i];
             }
-            bestResult = min(bestResult, res);
+            bestChoice = min(bestChoice,res);
         }
-        dp[mask] = bestResult;
+        dp[mask] = bestChoice;
     }
-    cout << dp[(1<<n) - 1].first;
+    cout<<dp[(1<<n) - 1].first<<"\n";
 }
 
 int main(){
@@ -42,6 +42,7 @@ int main(){
 #endif // ONLINE_JUDGE
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+    cout.tie(0);
     int t = 1;
     while(t--){
         solve();
